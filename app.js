@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 
 const Thing = require('./models/thing');
 const userRoutes = require('./routes/user');
+const StuffRoutes = require('./routes/stuff');
 const app = express();
 
 mongoose.connect('mongodb+srv://Dami:damilola2@cluster0-teywi.mongodb.net/test?retryWrites=true&w=majority')
@@ -42,5 +43,5 @@ app.use('/api/stuff', (req, res, next) => {
     ];
     res.status(200).json();
   });
-  app.use('/api/stuff', stuffRoutes);
+app.use('/api/stuff', stuffRoutes);
 app.use('/api/auth', userRoutes);
