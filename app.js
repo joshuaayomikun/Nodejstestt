@@ -21,7 +21,6 @@ app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
     next();
   });
-  app.post('/api/stuff', (req, res, next) => {
 app.use('/api/stuff', (req, res, next) => {
     const stuff = [
       {
